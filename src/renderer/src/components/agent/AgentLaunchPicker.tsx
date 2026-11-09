@@ -240,7 +240,6 @@ export const AgentLaunchPicker = memo(
                 : 'min-w-64'
             }
           >
-            {children}
             {model.state === 'settled' ? (
               <AgentLaunchPickerMenu
                 draftScope={draftScope ?? ownDraftScope}
@@ -248,6 +247,7 @@ export const AgentLaunchPicker = memo(
                 entries={entries}
                 initialQuery={initialQuery}
                 searchInputRef={setSearchInput}
+                leadingItems={children}
                 value={value}
                 draftForEntry={draftForEntry}
                 mode="select"
